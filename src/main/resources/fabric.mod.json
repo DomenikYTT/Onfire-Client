@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "onfire_client",
+  "version": "${version}",
+  "name": "Onfire Client",
+  "description": "This is an Utility Client for some nice Features :D",
+  "authors": ["Domenik_YT1", "Feuerphoenixxx"],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/onfire_client/logo.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "de.domenik_yt1.onfire_client.client.Onfire_ClientClient"
+    ],
+    "main": [
+      "de.domenik_yt1.onfire_client.Onfire_Client"
+    ],
+    "modmenu": [
+      "de.domenik_yt1.onfire_client.config.ModMenuIntegration"
+    ]
+  },
+  "mixins": [
+    "onfire_client.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}",
+    "yet_another_config_lib_v3": ">=3.8.2+1.21.11",
+    "modmenu": ">=17.0.0"
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.discord": "https://discord.gg/7kKekCnadC"
+      }
+    }
+  }
+}
