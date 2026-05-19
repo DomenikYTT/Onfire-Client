@@ -30,12 +30,15 @@ public abstract class MapInSlot {
     @Shadow
     public abstract void submitMapRenderState(MapRenderState mapRenderState);
 
+    @Shadow
+    @Final
+    private Matrix3x2fStack pose;
     @Unique
     private final MapRenderState mapRenderState = new MapRenderState();
 
     @Inject(
             method = "renderItemDecorations(Lnet/minecraft/client/gui/Font;Lnet/minecraft/world/item/ItemStack;IILjava/lang/String;)V",
-            at = @At(value = "TAIL")
+            at = @At(value = "HEAD")
     )
     private void drawMap(Font font, ItemStack stack, int i, int j, String string, CallbackInfo ci) {
         if (!OnFireConfig.MapInSlotEnabled) { return; }
