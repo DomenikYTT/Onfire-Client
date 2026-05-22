@@ -3,6 +3,7 @@ package de.domenik_yt1.onfire_client.config;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
+import de.domenik_yt1.onfire_client.client.utils.ColorKey;
 import dev.isxander.yacl3.api.*;
 import dev.isxander.yacl3.api.controller.BooleanControllerBuilder;
 import net.fabricmc.loader.api.FabricLoader;
@@ -23,6 +24,8 @@ public class OnFireConfig {
 
     public static boolean MapInSlotEnabled = true;
     public static boolean MapInTooltipEnabled = true;
+
+    public static boolean ColouredShulkerInventory = true;
 
     public static Screen createScreen(Screen parent) {
         read();
@@ -57,7 +60,21 @@ public class OnFireConfig {
                                 .build())
 
 
+                        .group(OptionGroup.createBuilder()
+                                .name(Component.translatable("onfire_client.config_group.name.shulker"))
+                                .description(OptionDescription.of(Component.translatable("onfire_client.config_group.tooltip.shulker")))
 
+                                .option(Option.<Boolean>createBuilder()
+                                        .name(Component.translatable("onfire_client.config.name.shulker_inventory"))
+                                        .description(OptionDescription.of(Component.translatable("onfire_client.config.tooltip.shulker_inventory")))
+                                        .binding(true, () -> ColouredShulkerInventory, newVal -> ColouredShulkerInventory = newVal)
+                                        .controller(opt -> BooleanControllerBuilder.create(opt)
+                                                .formatValue(val -> val ? Component.translatable("onfire_client.config.option.yes") : Component.translatable("onfire_client.config.option.no"))
+                                        )
+                                        .build())
+
+
+                                .build())
                         .build()
                 ).save(OnFireConfig::write)
                 .build()
@@ -74,6 +91,9 @@ public class OnFireConfig {
             JsonObject json = new JsonObject();
             json.addProperty("map_in_slot_enabled", MapInSlotEnabled);
             json.addProperty("map_in_tooltip", MapInTooltipEnabled);
+            json.addProperty("coloured_shulker_inventory", ColouredShulkerInventory);
+
+
 
             Files.writeString(configFile, GSON.toJson(json));
         } catch (Exception e) {
@@ -96,6 +116,10 @@ public class OnFireConfig {
             if (json.has("map_in_tooltip")) {
                 MapInTooltipEnabled = json.get("map_in_tooltip").getAsBoolean();
             }
+            if (json.has("coloured_shulker_inventory")) {
+                ColouredShulkerInventory = json.get("coloured_shulker_inventory").getAsBoolean();
+            }
+
         } catch (Exception e) {
 
         }

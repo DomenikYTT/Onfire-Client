@@ -4,11 +4,12 @@
   "package": "de.domenik_yt1.onfire_client.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "ShulkerBoxMenuAccessor"
   ],
   "client": [
-    "DrawContextMixin",
     "MapInSlot",
-    "MapInTooltip"
+    "MapInTooltip",
+    "ShulkerBoxScreenMixin"
   ],
   "injectors": {
     "defaultRequire": 1

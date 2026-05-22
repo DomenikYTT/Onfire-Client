@@ -1,26 +1,18 @@
 {
   "onfire_client.config.title": "OnFire Client",
-  "onfire_client.config.tooltip": "Optionen",
-
-
-
+  "onfire_client.config.tooltip": "Einstellungen",
   "onfire_client.config.option.yes": "§aJa",
   "onfire_client.config.option.no": "§cNein",
-
-
   "onfire_client.config_group.name.maps": "Map Einstellungen",
-
-
   "onfire_client.config_group.tooltip.maps": "Einstellungen für das Map Art Modul",
-  "onfire_client.config_group.tooltip.pvp": "Einstellungen für das PVP Modul",
+  "onfire_client.config.name.MapInSlotEnabled": "Karte Im Slot",
+  "onfire_client.config.name.MapInTooltipEnabled": "Karte im Tooltip",
+  "onfire_client.config.tooltip.MapInSlotEnabled": "Soll Das Map Art im Slot angezeigt werden?",
+  "onfire_client.config.tooltip.MapInTooltipEnabled": "Soll das Map Art im Item Tooltip angezeigt werden?",
+  "onfire_client.config.group.name.crossair": "Crossair",
+  "onfire_client.config.name.crossair_centered": "Mittiges Fadenkreuz",
+  "onfire_client.config.tooltip.crossair_centered": "Soll das Fadenkreuz Mittig sein?",
+  "onfire_client.config.tooltip.rgb_crossair": "Soll das Fadenkreuz RGB Leuchten?",
+  "onfire_client.config.name.rgb_crossair": "RGB Fadenkreuz"
 
-
-  "onfire_client.config.name.MapInSlotEnabled": "Karte Im Inventar",
-  "onfire_client.config.name.MapInTooltipEnabled": "Karte in der Beschreibung",
-  "onfire_client.config.name.shorter_swords": "Kurze Schwerter",
-
-
-  "onfire_client.config.tooltip.MapInSlotEnabled": "Soll die Karte im Item-Slot angezeigt werden?",
-  "onfire_client.config.tooltip.MapInTooltipEnabled": "Soll die Karte in der Item Beschreibung angezeigt werden?",
-  "onfire_client.config.tooltip.shorter_swords": "Sollen alle Schwerter Kürzer sein?"
 }

@@ -3,28 +3,21 @@
   "onfire_client.config.tooltip": "Options",
 
 
-
   "onfire_client.config.option.yes": "§aYes",
   "onfire_client.config.option.no": "§cNo",
 
 
   "onfire_client.config_group.name.maps": "Map Settings",
-  "onfire_client.config_group.name.pvp": "PVP Settings",
-
-
-
   "onfire_client.config_group.tooltip.maps": "Settings For the Map Art Module.",
-  "onfire_client.config_group.tooltip.pvp": "Settings For the PVP Module.",
+  "onfire_client.config_group.name.shulker": "Shulker Settings",
+  "onfire_client.config_group.tooltip.shulker": "Settings For the Shulker Module.",
 
 
   "onfire_client.config.name.MapInSlotEnabled": "Map In Slot",
   "onfire_client.config.name.MapInTooltipEnabled": "Map in Tooltip",
-  "onfire_client.config.name.shorter_swords": "Short Swords",
-
-
+  "onfire_client.config.name.shulker_inventory": "Coloured Shulker Inventory",
 
   "onfire_client.config.tooltip.MapInSlotEnabled": "Should the map art be displayed in the item slot?",
   "onfire_client.config.tooltip.MapInTooltipEnabled": "Should the map art be displayed in the item tooltip?",
-  "onfire_client.config.tooltip.shorter_swords": "Should be All Swords shorter?"
-
+  "onfire_client.config.tooltip.shulker_inventory": "Should All Shulker Inventories be Coloured?"
 }
