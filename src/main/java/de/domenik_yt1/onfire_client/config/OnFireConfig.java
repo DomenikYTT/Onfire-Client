@@ -27,6 +27,9 @@ public class OnFireConfig {
 
     public static boolean ColouredShulkerInventory = true;
 
+
+    public static boolean GlowingArmortrims = true;
+
     public static Screen createScreen(Screen parent) {
         read();
         return YetAnotherConfigLib.createBuilder()
@@ -75,6 +78,22 @@ public class OnFireConfig {
 
 
                                 .build())
+
+                        .group(OptionGroup.createBuilder()
+                                .name(Component.translatable("onfire_client.config_group.name.miscellaneous"))
+                                .description(OptionDescription.of(Component.translatable("onfire_client.config_group.tooltip.miscellaneous")))
+                                .option(Option.<Boolean>createBuilder()
+                                        .name(Component.translatable("onfire_client.config.name.glowing_armor-trims"))
+                                        .description(OptionDescription.of(Component.translatable("onfire_client.config.tooltip.glowing_armor-trims")))
+                                        .binding(true, () -> GlowingArmortrims, newVal -> GlowingArmortrims = newVal)
+                                        .controller(opt -> BooleanControllerBuilder.create(opt)
+                                                .formatValue(val -> val ? Component.translatable("onfire_client.config.option.yes") : Component.translatable("onfire_client.config.option.no"))
+                                        )
+                                        .build())
+                                .build())
+
+
+
                         .build()
                 ).save(OnFireConfig::write)
                 .build()

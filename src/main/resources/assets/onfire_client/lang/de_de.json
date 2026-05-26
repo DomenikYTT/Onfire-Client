@@ -1,18 +1,29 @@
 {
   "onfire_client.config.title": "OnFire Client",
   "onfire_client.config.tooltip": "Einstellungen",
+
+
   "onfire_client.config.option.yes": "§aJa",
   "onfire_client.config.option.no": "§cNein",
-  "onfire_client.config_group.name.maps": "Map Einstellungen",
-  "onfire_client.config_group.tooltip.maps": "Einstellungen für das Map Art Modul",
+
+
+  "onfire_client.config_group.name.maps": "Karten Einstellungen",
+  "onfire_client.config_group.name.shulker": "Shulker Einstellungen",
+  "onfire_client.config_group.name.miscellaneous": "Sonstiges",
+
+
+  "onfire_client.config_group.tooltip.shulker": "Einstellungen für das Shulker-Kisten Modul.",
+  "onfire_client.config_group.tooltip.maps": "Einstellungen für das Map Art Modul.",
+  "onfire_client.config_group.tooltip.miscellaneous": "Einstellungen für das Sonstiges Modul.",
+
+
   "onfire_client.config.name.MapInSlotEnabled": "Karte Im Slot",
   "onfire_client.config.name.MapInTooltipEnabled": "Karte im Tooltip",
-  "onfire_client.config.tooltip.MapInSlotEnabled": "Soll Das Map Art im Slot angezeigt werden?",
-  "onfire_client.config.tooltip.MapInTooltipEnabled": "Soll das Map Art im Item Tooltip angezeigt werden?",
-  "onfire_client.config.group.name.crossair": "Crossair",
-  "onfire_client.config.name.crossair_centered": "Mittiges Fadenkreuz",
-  "onfire_client.config.tooltip.crossair_centered": "Soll das Fadenkreuz Mittig sein?",
-  "onfire_client.config.tooltip.rgb_crossair": "Soll das Fadenkreuz RGB Leuchten?",
-  "onfire_client.config.name.rgb_crossair": "RGB Fadenkreuz"
+  "onfire_client.config.name.shulker_inventory": "Farbige Shulker Kisten",
+  "onfire_client.config.name.glowing_armor-trims": "Leuchtene Armor Trims",
 
+  "onfire_client.config.tooltip.MapInSlotEnabled": "Sollen die Map Arts im Inventar-Slot angezeigt werden?",
+  "onfire_client.config.tooltip.MapInTooltipEnabled": "Sollen die Map Arts in der Item-Beschreibung angezeigt werden?",
+  "onfire_client.config.tooltip.shulker_inventory": "Sollen alle Shulker-Kisten-Inventare Farbig sein? ",
+  "onfire_client.config.tooltip.glowing_armor-trims": "Sollen alle Armor Trims Leuchten?"
 }

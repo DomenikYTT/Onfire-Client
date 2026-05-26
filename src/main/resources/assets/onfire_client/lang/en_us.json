@@ -8,16 +8,22 @@
 
 
   "onfire_client.config_group.name.maps": "Map Settings",
-  "onfire_client.config_group.tooltip.maps": "Settings For the Map Art Module.",
   "onfire_client.config_group.name.shulker": "Shulker Settings",
+  "onfire_client.config_group.name.miscellaneous": "Miscellaneous",
+
+
   "onfire_client.config_group.tooltip.shulker": "Settings For the Shulker Module.",
+  "onfire_client.config_group.tooltip.maps": "Settings For the Map Art Module.",
+  "onfire_client.config_group.tooltip.miscellaneous": "Settings for the Miscellaneous Module.",
 
 
   "onfire_client.config.name.MapInSlotEnabled": "Map In Slot",
   "onfire_client.config.name.MapInTooltipEnabled": "Map in Tooltip",
   "onfire_client.config.name.shulker_inventory": "Coloured Shulker Inventory",
+  "onfire_client.config.name.glowing_armor-trims": "Glowing Armor Trims",
 
   "onfire_client.config.tooltip.MapInSlotEnabled": "Should the map art be displayed in the item slot?",
   "onfire_client.config.tooltip.MapInTooltipEnabled": "Should the map art be displayed in the item tooltip?",
-  "onfire_client.config.tooltip.shulker_inventory": "Should All Shulker Inventories be Coloured?"
+  "onfire_client.config.tooltip.shulker_inventory": "Should All Shulker Inventories be Coloured?",
+  "onfire_client.config.tooltip.glowing_armor-trims": "Should be all Armor Trims be Glowing?"
 }
