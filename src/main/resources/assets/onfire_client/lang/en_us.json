@@ -3,6 +3,10 @@
   "onfire_client.config.tooltip": "Options",
 
 
+  "key.category.onfire_client.main": "OnFire Client",
+  "key.onfire_client.config": "Open Config",
+
+
   "onfire_client.config.option.yes": "§aYes",
   "onfire_client.config.option.no": "§cNo",
 

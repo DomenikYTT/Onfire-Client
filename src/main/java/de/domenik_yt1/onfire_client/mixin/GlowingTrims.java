@@ -1,6 +1,7 @@
 package de.domenik_yt1.onfire_client.mixin;
 
 import com.llamalad7.mixinextras.sugar.Local;
+import de.domenik_yt1.onfire_client.config.OnFireConfig;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.renderer.entity.layers.EquipmentLayerRenderer;
@@ -20,6 +21,8 @@ public class GlowingTrims {
     argsOnly = true
     )
     private int modifyLight(int originalLight, @Local(argsOnly = true) ItemStack stack) {
+        if (!OnFireConfig.GlowingArmortrims) { return originalLight; }
+
         if (stack != null && stack.has(DataComponents.TRIM)) {
             return 15728880;
         }
