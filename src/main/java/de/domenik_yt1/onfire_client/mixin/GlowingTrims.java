@@ -9,23 +9,25 @@ import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.item.ItemStack;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.ModifyArg;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
 
 @Environment(EnvType.CLIENT)
 @Mixin(EquipmentLayerRenderer.class)
 public class GlowingTrims {
 
-    @ModifyVariable(method = "renderLayers(Lnet/minecraft/client/resources/model/EquipmentClientInfo$LayerType;Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/client/model/Model;Ljava/lang/Object;Lnet/minecraft/world/item/ItemStack;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;II)V",
-    at = @At("HEAD"),
-    ordinal = 0,
-    argsOnly = true
+    @ModifyArg(
+            method = "renderLayers(Lnet/minecraft/client/resources/model/EquipmentClientInfo$LayerType;Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/client/model/Model;Ljava/lang/Object;Lnet/minecraft/world/item/ItemStack;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;ILnet/minecraft/resources/Identifier;II)V",
+            at = @At(
+                    value = "INVOKE",
+                    target = "Lnet/minecraft/client/renderer/OrderedSubmitNodeCollector;submitModel(Lnet/minecraft/client/model/Model;Ljava/lang/Object;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/rendertype/RenderType;IIILnet/minecraft/client/renderer/texture/TextureAtlasSprite;ILnet/minecraft/client/renderer/feature/ModelFeatureRenderer$CrumblingOverlay;)V",
+    ordinal = 2
+            ),
+    index = 4
     )
-    private int modifyLight(int originalLight, @Local(argsOnly = true) ItemStack stack) {
-        if (!OnFireConfig.GlowingArmortrims) { return originalLight; }
+    private int makeTrimGlow(int light) {
+        if (!OnFireConfig.GlowingArmortrims) { return light; }
 
-        if (stack != null && stack.has(DataComponents.TRIM)) {
-            return 15728880;
-        }
-        return originalLight;
+        return OnFireConfig.GlowingArmorTrimsStrength;
     }
 }

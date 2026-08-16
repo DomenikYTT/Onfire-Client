@@ -26,9 +26,11 @@
   "onfire_client.config.name.MapInTooltipEnabled": "Karte im Tooltip",
   "onfire_client.config.name.shulker_inventory": "Farbige Shulker Kisten",
   "onfire_client.config.name.glowing_armor-trims": "Leuchtene Armor Trims",
+  "onfire_client.config.name.glowing_armor-trims-slider": "Armor Trim Leucht stärke",
 
   "onfire_client.config.tooltip.MapInSlotEnabled": "Sollen die Map Arts im Inventar-Slot angezeigt werden?",
   "onfire_client.config.tooltip.MapInTooltipEnabled": "Sollen die Map Arts in der Item-Beschreibung angezeigt werden?",
   "onfire_client.config.tooltip.shulker_inventory": "Sollen alle Shulker-Kisten-Inventare Farbig sein? ",
-  "onfire_client.config.tooltip.glowing_armor-trims": "Sollen alle Armor Trims Leuchten?"
+  "onfire_client.config.tooltip.glowing_armor-trims": "Sollen alle Armor Trims Leuchten?",
+  "onfire_client.config.tooltip.glowing_armor-trims-slider": "wie stark sollen die Armor Trims leuchten?"
 }

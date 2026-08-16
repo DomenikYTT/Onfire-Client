@@ -6,6 +6,7 @@ import com.google.gson.JsonObject;
 import de.domenik_yt1.onfire_client.client.utils.ColorKey;
 import dev.isxander.yacl3.api.*;
 import dev.isxander.yacl3.api.controller.BooleanControllerBuilder;
+import dev.isxander.yacl3.api.controller.IntegerSliderControllerBuilder;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
@@ -29,6 +30,8 @@ public class OnFireConfig {
 
 
     public static boolean GlowingArmortrims = true;
+
+    public static int GlowingArmorTrimsStrength = 255;
 
     public static Screen createScreen(Screen parent) {
         read();
@@ -90,6 +93,21 @@ public class OnFireConfig {
                                                 .formatValue(val -> val ? Component.translatable("onfire_client.config.option.yes") : Component.translatable("onfire_client.config.option.no"))
                                         )
                                         .build())
+
+                                .option(Option.<Integer>createBuilder()
+                                        .name(Component.translatable("onfire_client.config.name.glowing_armor-trims-slider"))
+                                        .description(OptionDescription.of(Component.translatable("onfire_client.config.tooltip.glowing_armor-trims-slider")))
+                                        .binding(255, () -> GlowingArmorTrimsStrength, newVal -> GlowingArmorTrimsStrength = newVal)
+                                        .controller(opt -> IntegerSliderControllerBuilder.create(opt)
+                                                .range(0, 255)
+                                                .step(1)
+                                                .valueFormatter(val -> Component.literal((Math.round((val / 255.0) * 100) + "%")))
+                                        )
+
+
+
+                                        .build())
+
                                 .build())
 
 

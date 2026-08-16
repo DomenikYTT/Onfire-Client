@@ -4,7 +4,7 @@
   "version": "${version}",
   "name": "Onfire Client",
   "description": "This is an Utility Client for some nice Features :D",
-  "authors": ["Domenik_YT1 (Idea for the features and Developer)", "Feuerphoenixxx (Idea for the name.)"],
+  "authors": ["Domenik_YT1", "Feuerphoenixxx"],
   "contact": {},
   "license": "MIT",
   "icon": "assets/onfire_client/logo.png",
